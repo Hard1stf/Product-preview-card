@@ -1,3 +1,3 @@
-##Product preview card
-# HTHML + CSS Project
-# Original design is different from this design.
+# Product preview card
+## HTML + CSS Project
+### Original design is different from this design.
