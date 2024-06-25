@@ -1,0 +1,191 @@
+:root {
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* Neutral */
+    --vary-dark-blue: hsl(156, 42%, 18%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font Family Group */
+    --Montserrat: "Montserrat", sans-serif;
+    --Fraunces: "Fraunces", serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 20px;
+}
+
+.card {
+    background-color: var(--white);
+    min-height: 500px;
+    max-width: 342px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.mobile-image {
+    width: 100%;
+    min-height: 230px;
+    background-image: url(./images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.info-container {
+    padding-inline: 25px;
+}
+
+.premium {
+    font-size: 12px;
+    font-family: var(--Montserrat);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-block: 15px;
+}
+
+.info-container h2 {
+    font-family: var(--Fraunces);
+    font-weight: 700;
+    padding-right: 40px;
+    padding-bottom: 15px;
+}
+
+.para {
+    font-size: 14px;
+    font-family: var(--Montserrat);
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+    /* text-align: left; */
+    padding-bottom: 15px;
+    line-height: 26px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 15px;
+    /* width: 100%; */
+}
+
+.price h1 {
+    font-family: var(--Fraunces);
+    color: var(--dark-cyan);
+}
+
+.price p {
+    color: var(--dark-grayish-blue);
+    font-family: var(--Montserrat);
+    font-size: 14px;
+}
+
+a {
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    font-size: 14px;
+    font-family: var(--Montserrat);
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    padding-block: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Desktop screen size .. */
+
+@media (min-width: 1024px) {
+    .card {
+        /* background-color: var(--white); */
+        display: flex;
+        flex-direction: row;
+        min-height: 450px;
+        min-width: 0px;
+        transition: min-width 0.5s ease-in-out, box-shadow 0.9s ease-in-out;
+        /* transition: box-shadow 0.5s ease-in-out; */
+        box-shadow: 0px 0px 20px 0px #0000008f;
+    }
+    
+    .card:hover{
+        min-width: 600px;
+        box-shadow: none;
+    }
+
+    .mobile-image {
+        max-width: 300px;
+        background-image: url(./images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-size: 100%; */
+    }
+
+    .info-container {
+        max-width: 300px;
+        /* height: 100%; */
+        /* width: 300px; */
+        padding-inline: 18px;
+        padding-block: 16px;
+    }
+
+    .premium {
+        font-size: 14px;
+        /* font-family: var(--Montserrat); */
+        /* text-transform: uppercase; */
+        /* letter-spacing: 5px; */
+        padding-top: 16px;
+        padding-bottom: 1rem;
+    }
+    
+    .info-container h2 {
+        font-size: 2rem;
+        /* font-family: var(--Fraunces); */
+        /* font-weight: 700; */
+        padding-right: 0px;
+        padding-bottom: 1rem;
+    }
+    
+    .para {
+        /* font-size: 14px; */
+        /* font-family: var(--Montserrat); */
+        /* color: var(--dark-grayish-blue); */
+        /* text-align: left; */
+        padding-bottom: 30px;
+    }
+    
+    .price {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 30px;
+        /* width: 100%; */
+    }
+    
+    a {
+        background-color: var(--dark-cyan);
+        transition: background-color 0.2s ease-in-out;
+    }
+    
+    a:hover{
+        background-color: var(--vary-dark-blue);
+    }
+}
