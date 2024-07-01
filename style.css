@@ -130,7 +130,7 @@ a {
         min-width: 600px;
         box-shadow: none;
     }
-    
+
     .mobile-image {
         max-width: 300px;
         background-image: url(./images/image-product-desktop.jpg);
@@ -138,19 +138,13 @@ a {
         background-size: cover;
         /* background-size: 100%; */
     }
-    
+
     .info-container {
         max-width: 300px;
         /* height: 100%; */
         /* width: 300px; */
         padding-inline: 18px;
         padding-block: 16px;
-        box-shadow: -8px 0px 50px 0px #0000008c;
-        transition: box-shadow 200ms ease-in-out;
-    }
-    
-    .info-container:hover{
-        box-shadow: none;
     }
 
     .premium {
